@@ -1,0 +1,145 @@
+// ===================================================== //
+
+$darkColor:#1d1c25;
+$white:#f3f3f3;
+$textBright:#fde9cc;
+$textShadow: #312d27;
+$darkCover:#292929bb;
+$gray: #d4d4d4;
+
+//? https://colorhunt.co/palette/fbf46db4fe9877e4d4998ceb
+$yellow: #FBF46D;
+$green:#B4FE98;
+$blue: #77E4D4;
+$purple:#b2a6fd;
+
+$red:#ff8b81;
+
+@font-face {
+  font-family: 'ONE-Mobile-Title';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$rigidFont:'ONE-Mobile-Title';
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+$mainFont:'Pretendard-Regular';
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+$hardFont:'Black Han Sans', sans-serif;
+
+// ===================================================== // 
+
+body{
+  background-color: $white;
+  font-family: $mainFont;
+}
+
+section.title{
+  min-height: 300px; 
+  padding: 50px 0px;
+
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/laptop.jpg");
+  background-clip: padding-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  div.radial-wrapper{
+    position: relative;
+    z-index: 1;
+    div#my-img-wrapper{
+      display: flex;
+      justify-content: center;
+      // width: 300px;
+      height: 250px;
+      width: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid $green;
+      img{
+        height: 335px;
+        object-fit: contain;
+        // object-position: 0 0px;
+      }
+    }
+    &::before{
+      content: " ";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      top: -20px;
+      left: -20px;
+      border-radius: 50%;
+      // 반복되는 점 배경 효과.
+      background-image: radial-gradient($purple 1px, transparent 1px), radial-gradient($yellow 1px, transparent 1px);
+      background-position: 0 0, 6px 6px;
+      background-size: 12px 12px;
+      background-repeat: repeat;
+      z-index: -1;
+    }
+    &::after{
+      content: " ";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      top: 20px;
+      left: 20px;
+      border-radius: 50%;
+      // 반복되는 점 배경 효과.
+      background-image: radial-gradient($red 1px, transparent 1px), radial-gradient($blue 1px, transparent 1px);
+      background-position: 0 0, 5px 5px;
+      background-size: 10px 10px;
+      background-repeat: repeat;
+      z-index: -1;
+    }
+  }
+  div.introduction-wrapper{
+    color: $textBright;
+    text-shadow: 4px 1px $textShadow;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: $darkCover;
+    border-radius: 30px;
+    hr{
+      width: 320px;
+      border : 2px solid $green;
+      margin: 15px auto;
+    }
+    div.header{
+      text-align: center;
+      padding: 10px 0px;
+      font-family: $rigidFont;
+      font-size: 40px;
+      span.eng-name{
+        font-size: 30px;
+      }
+    }
+    div.introduction{
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      line-height: 35px;
+    }
+  }
+}
+
+section.about-me{
+  padding-top: 30px;
+  div.title{
+    font-family: $hardFont;
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
