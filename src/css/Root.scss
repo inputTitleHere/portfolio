@@ -1,19 +1,36 @@
 // ===================================================== //
 
+
 $darkColor:#1d1c25;
 $white:#f3f3f3;
 $textBright:#fde9cc;
 $textShadow: #312d27;
-$darkCover:#292929bb;
+$darkCover:#2c2520dc;
+$dimShadow:#2b251d5d;
+$darkwood:#6d4209;
 $gray: #d4d4d4;
 
-//? https://colorhunt.co/palette/fbf46db4fe9877e4d4998ceb
-$yellow: #FBF46D;
+//? Picked from Color Hunt (not a set though)
+$yellow: #FFC93C;
 $green:#B4FE98;
 $blue: #77E4D4;
 $purple:#b2a6fd;
 
 $red:#ff8b81;
+
+//? for background -> https://colorhunt.co/palette/a7d2cbf2d388c98474874c62
+$bgt1:#F5F0BB;
+$bgt2:#C4DFAA;
+$bgt3:#90C8AC;
+$bgt4:#73A9AD;
+
+//? Darker Color -> https://colorhunt.co/palette/351f39726a95719fb0a0c1b8
+$darkGreen:#A0C1B8;
+$darkYellow:#D89216;
+$darkBlue:#1597BB;
+$darkPurple:#504d5e;
+
+
 
 @font-face {
   font-family: 'ONE-Mobile-Title';
@@ -41,9 +58,34 @@ body{
   font-family: $mainFont;
 }
 
+section{
+  width: 1000px;
+  margin: 0px auto;
+  div.title{
+    // margin-top: 30px;
+    font-family: $hardFont;
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0px 0px 30px 20px;
+    border-left: 15px solid $red;
+    border-bottom: 2px solid $red;
+    border-radius: 0 0 0 15px;
+    padding-top: 5px;
+    padding-left: 20px;
+  }
+  div.title-wrapper{
+    background-color: $white;
+    width: 1000px;
+    padding: 10px 20px 10px 0px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 15px 5px $dimShadow;
+  }
+}
+//^--------------------------------------
 section.title{
   min-height: 300px; 
   padding: 50px 0px;
+  width: 100%;
 
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/laptop.jpg");
   background-clip: padding-box;
@@ -62,11 +104,11 @@ section.title{
       display: flex;
       justify-content: center;
       // width: 300px;
-      height: 250px;
+      height: 330px;
       width: 250px;
-      border-radius: 50%;
+      border-radius: 10px;
       overflow: hidden;
-      border: 3px solid $green;
+      // border: 3px solid $green;
       img{
         height: 335px;
         object-fit: contain;
@@ -80,7 +122,7 @@ section.title{
       height: 260px;
       top: -20px;
       left: -20px;
-      border-radius: 50%;
+      border-radius: 10px;
       // 반복되는 점 배경 효과.
       background-image: radial-gradient($purple 1px, transparent 1px), radial-gradient($yellow 1px, transparent 1px);
       background-position: 0 0, 6px 6px;
@@ -93,9 +135,9 @@ section.title{
       position: absolute;
       width: 260px;
       height: 260px;
-      top: 20px;
+      bottom: -20px;
       left: 20px;
-      border-radius: 50%;
+      border-radius: 10px;
       // 반복되는 점 배경 효과.
       background-image: radial-gradient($red 1px, transparent 1px), radial-gradient($blue 1px, transparent 1px);
       background-position: 0 0, 5px 5px;
@@ -133,13 +175,181 @@ section.title{
     }
   }
 }
-
+//^--------------------------------------
+div.aboutme-wrapper{
+  background-color: $white;
+}
 section.about-me{
-  padding-top: 30px;
-  div.title{
-    font-family: $hardFont;
-    font-size: 40px;
-    text-align: center;
+  padding: 30px 0px;
+  width: 1000px;
+  margin: 0px auto;
+
+  div.bio-wrapper{
+    margin: 0px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    table.bio-item{
+      display: inline-block;
+      width: 40%;
+      border-spacing: 0;
+      margin: 0px 20px;
+      td{
+        height: 30px;
+        &.td-title{
+          vertical-align: bottom;
+        }
+        &.td-info{
+          vertical-align: top;
+        }
+      }
+      div.bio-title{
+        display: inline;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $purple;
+        font-family: $rigidFont;
+        font-size: 26px;
+      }
+      div.bio-info{
+        padding-top: 10px;
+        font-size: 20px;
+      }
+      img{
+        object-fit: contain;
+        width: 65px;
+        height: 65px;
+        padding: 15px;
+      }
+    }
   }
+}
+//^--------------------------------------
+div.education-wrapper{
+  padding: 20px;
+  background-color: $bgt2;
+}
+section.education{
+  width: 1000px;
+  background-color: $white;
+  padding: 20px 20px 20px 0px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px 5px $dimShadow;
+  div.eduItem{
+    padding-left: 30px;
+    h4{
+      font-size: 24px;
+      margin-bottom: 5px;
+      &::before{
+        content: "\276F";
+        padding-right: 15px;
+      }
+    }
+    h5{
+      font-size: 20px;
+      margin: 10px 0;
+      &::before{
+        content:"\2794";
+        padding-right: 15px;
+        margin-left: 20px;
+      }
+    }
+    span{
+      background-color: $bgt2;
+      border-radius: 3px;
+      padding: 3px;
+    }
+    ul{
+      margin-left: 20px;
+      border-left: 3px solid $purple;
+      list-style: none;
+      padding-left: 20px;
+      li{
+        font-size: 18px;
+        vertical-align: middle;
+        margin: 10px 0px;
+        &::before{
+          content: "+";
+          line-height: 18px;
+          font-size: 20px;
+          font-weight: bolder;
+          padding-right: 5px;
+        }
+        ul{
+          margin-left: 5px;
+          padding-left: 20px;
+          border-left: 3px solid $bgt4;
+          li::before{
+            content: "->";
+          }
+        }
+      }
+    }
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+//^--------------------------------------
+div.skills-wrapper{
+  padding: 20px;
+  background-color: $textBright;
+}
+
+section.skills{
+  // background-color: $white;
+  padding-right: 20px;
+  border-radius: 30px;
+  div.skill-content{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    align-items: center;
+    //! 여기거 skills & licences 높이조절부
+    height: 500px;
+    //! 여기거 skills & licences 높이조절부
+    div.skill-item{
+      background-color: $white;
+      display: flex;
+      height: fit-content;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 20px;
+      box-shadow: 5px 5px 5px 5px $dimShadow;
+      padding: 10px 20px;
+      margin: 10px;
+      h3{
+        font-family: $rigidFont;
+        width: 180px;
+        padding-bottom: 10px;
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: 2px solid $purple;
+        padding-bottom: 5px;
+      }
+      img{
+        height: 80px;
+        width: 180px;
+        object-fit: contain;
+      }
+      div.inner-text{
+        padding-top: 5px;
+        font-family: $rigidFont;
+        font-size: 15px;
+      }
+    }
+  }
+}
+//^--------------------------------------
+div.projects-wrapper{
+  padding: 20px;
+  background-color: $bgt3;
+}
+
+section.projects{
+  padding: 20px 20px 20px 0px;
+  // background-color: $white;
+  border-radius: 30px;
 }
 
