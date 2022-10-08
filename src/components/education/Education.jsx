@@ -9,7 +9,6 @@ function Education(props){
         <h4>유성고등학교</h4>
         <ul>
           <li>졸업 <span>(2013~2016)</span></li>
-          <li>인문계</li>
         </ul>
         
       </div>

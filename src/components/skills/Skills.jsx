@@ -6,10 +6,10 @@ function Skills(props){
     <div className="title">Skills & Licenses</div>
     <div className="skill-content">
       <SkillContent classname="language" images={["java","python"]}/>
-      <SkillContent classname="database" images={["oracle"]} />
-      <SkillContent classname="backend" images={["servlet_jsp","spring","mybatis"]}/>
       <SkillContent classname="frontend" images={["html_css_js","sass","react","jquery"]}/>
-      <SkillContentWithText classname="licences" images={["qnet"]} innerText={["정보처리기사 (필기 & 실기)"]}/>
+      <SkillContent classname="backend" images={["servlet_jsp","spring","mybatis"]}/>
+      <SkillContent classname="database" images={["oracle"]} />
+      <SkillContentWithText classname="licences" images={["qnet"]} innerText={["정보처리기사"]}/>
       <SkillContent classname="version-control" images={["git","github_long"]}/>
     </div>
   </section>

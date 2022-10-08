@@ -20,7 +20,7 @@ function Title(props){
         </div>
         <hr />
         <div className="introduction">
-          <strong>안녕하세요!</strong> <br />
+          <strong>안녕하세요~</strong> <br />
           <strong>새로운 지식, 새로운 기술</strong>을 배우기를 좋아하는 웹 개발자 <strong>백승윤</strong>입니다! <br />
         </div>
       </div>

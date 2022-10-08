@@ -21,7 +21,7 @@ $red:#ff8b81;
 //? for background -> https://colorhunt.co/palette/a7d2cbf2d388c98474874c62
 $bgt1:#F5F0BB;
 $bgt2:#C4DFAA;
-$bgt3:#90C8AC;
+$bgt3:#a8e7c8;
 $bgt4:#73A9AD;
 
 //? Darker Color -> https://colorhunt.co/palette/351f39726a95719fb0a0c1b8
@@ -53,13 +53,17 @@ $hardFont:'Black Han Sans', sans-serif;
 
 // ===================================================== // 
 
+:root{
+  --skill-height : 650px;
+}
+
 body{
   background-color: $white;
   font-family: $mainFont;
 }
 
 section{
-  width: 1000px;
+  max-width: 1000px;
   margin: 0px auto;
   div.title{
     // margin-top: 30px;
@@ -85,7 +89,7 @@ section{
 section.title{
   min-height: 300px; 
   padding: 50px 0px;
-  width: 100%;
+  max-width: 100%;
 
   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/laptop.jpg");
   background-clip: padding-box;
@@ -297,16 +301,19 @@ div.skills-wrapper{
 }
 
 section.skills{
+  max-width: 1000px;
+
   // background-color: $white;
   padding-right: 20px;
   border-radius: 30px;
   div.skill-content{
     display: flex;
     flex-flow: column wrap;
+    flex-wrap: wrap;
     align-content: space-around;
     align-items: center;
     //! 여기거 skills & licences 높이조절부
-    height: 500px;
+    height: var(--skill-height);
     //! 여기거 skills & licences 높이조절부
     div.skill-item{
       background-color: $white;
@@ -334,9 +341,10 @@ section.skills{
         object-fit: contain;
       }
       div.inner-text{
+        text-align: center;
         padding-top: 5px;
         font-family: $rigidFont;
-        font-size: 15px;
+        font-size: 22px;
       }
     }
   }
@@ -351,5 +359,46 @@ section.projects{
   padding: 20px 20px 20px 0px;
   // background-color: $white;
   border-radius: 30px;
+  
+  div.project-item{
+    padding: 20px;
+    background-color: $white;
+    border-radius: 20px;
+    width: 320px;
+    h2.title{
+      text-align: center;
+      font-size: 28px;
+      font-family: $rigidFont;
+      margin: 10px 0px;
+    }
+    div.img{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 300px;
+      }
+    }
+    ul{
+      margin: 10px;
+      padding: 0;
+      list-style: none;
+      overflow-wrap: break-word;
+      li{
+        &::before{
+          content: "+";
+          font-weight: bold;
+          padding-right: 10px;
+        }
+      }
+    }
+    div.info{
+      line-height: 26px;
+      h4{
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+
 }
 

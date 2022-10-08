@@ -11,7 +11,7 @@ function AboutMe(props) {
       <div className="title">About Me</div>
       <div className="bio-wrapper">
         <BioItem img={human} title="이름" info="백승윤" />
-        <BioItem img={calendar} title="생년월" info="1997.10" />
+        <BioItem img={calendar} title="생년" info="1997년" />
         <BioItem img={address} title="주소" info="서울특별시 송파구" />
         <BioItem img={phone} title="전화번호" info="010-6655-1793" />
         <BioItem img={email} title="이메일" info="seanbryan97@naver.com" />
