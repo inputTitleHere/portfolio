@@ -23,7 +23,7 @@ function SkillContent({classname,images, rowsize}){
       <h3><span dangerouslySetInnerHTML={{__html:classname.toUpperCase().replace("-","<br>")}}></span></h3>
       {
         images.map((item,key)=>{
-          return <img src={`/img/${item}.png`} alt="" key={key}/>
+          return <img src={`./portfolio/img/${item}.png`} alt="" key={key}/>
         })
       }
     </div>
@@ -40,7 +40,7 @@ function SkillContentWithText({classname,images,innerText}){
 
   const imageWithText = images.map((item, key)=>{
     return <div key={key}>
-      <img src={`/img/${item}.png`} alt=""/>
+      <img src={`./portfolio/img/${item}.png`} alt=""/>
       <div className="inner-text">
         {innerText[key]}
       </div>
