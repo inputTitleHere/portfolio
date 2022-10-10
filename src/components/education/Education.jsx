@@ -37,7 +37,7 @@ function Education(props) {
                 target={"_blank"}
                 rel="noreferrer"
               >
-                <img src={`/img/github.png`} alt="" />
+                <img src={`./img/github.png`} alt="" />
               </a>
             </li>
           </ul>
