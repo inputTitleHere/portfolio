@@ -5,21 +5,21 @@ function Skills(props){
   <section className="skills">
     <div className="title">Skills & Licenses</div>
     <div className="skill-content">
-      <SkillContent classname="language" images={["java","python"]}/>
-      <SkillContent classname="frontend" images={["html_css_js","sass","react","jquery"]}/>
-      <SkillContent classname="backend" images={["servlet_jsp","spring","mybatis"]}/>
-      <SkillContent classname="database" images={["oracle"]} />
-      <SkillContentWithText classname="licences" images={["qnet"]} innerText={["정보처리기사"]}/>
-      <SkillContent classname="version-control" images={["git","github_long"]}/>
+      <SkillContent classname="language" images={["java","python"]} rowsize={"1"}/>
+      <SkillContent classname="frontend" images={["html_css_js","sass","react","jquery"]} rowsize={"2"} />
+      <SkillContent classname="backend" images={["servlet_jsp","spring","mybatis"]} rowsize={"2"}/>
+      <SkillContent classname="database" images={["oracle"]} rowsize={"1"}/>
+      <SkillContentWithText classname="licences" images={["qnet"]} innerText={["정보처리기사"]} rowsize={"1"}/>
+      <SkillContent classname="version-control" images={["git","github_long"]} rowsize={"1"}/>
     </div>
   </section>
   )
 }
 
-function SkillContent({classname,images}){
+function SkillContent({classname,images, rowsize}){
 
   return(
-    <div className={"skill-item "+ classname}>
+    <div className={"skill-item "+ classname} style={{gridRow:'span '+ rowsize}}>
       <h3><span dangerouslySetInnerHTML={{__html:classname.toUpperCase().replace("-","<br>")}}></span></h3>
       {
         images.map((item,key)=>{

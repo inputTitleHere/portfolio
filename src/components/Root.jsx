@@ -1,7 +1,7 @@
 import "../css/Root.scss"
 import AboutMe from "./aboutMe/AboutMe";
+import Footer from "./common/Footer";
 import Education from "./education/Education";
-import Spacer from "./header/spacer";
 import Projects from "./projects/Projects";
 import Skills from "./skills/Skills";
 import Title from "./title/Title";
@@ -25,7 +25,7 @@ function Root(props){
       <div className="projects-wrapper">
         <Projects/>
       </div>
-      <Spacer/>
+      <Footer/>
     </div>
   )
 }
