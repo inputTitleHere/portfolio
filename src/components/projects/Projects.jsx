@@ -91,7 +91,7 @@ function ProjectItem({
     <div className="project-item">
       <h2 className="title"><span>{title}</span></h2>
       <div className="left">
-        <img src={`/img/proj_img/${image}.png`} alt="" />
+        <img src={`./img/proj_img/${image}.png`} alt="" />
         <ul>
           <li className="github">
             <a href={github} target={"_blank"} rel={"noreferrer"}>
