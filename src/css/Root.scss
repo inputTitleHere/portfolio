@@ -338,16 +338,41 @@ section.skills{
         border-bottom: 2px solid $purple;
         padding-bottom: 5px;
       }
-      img{
-        height: 80px;
-        width: 180px;
-        object-fit: contain;
-      }
-      div.inner-text{
-        text-align: center;
-        padding-top: 5px;
-        font-family: $rigidFont;
-        font-size: 22px;
+      div.img-wrapper{
+        position: relative;
+        img{
+          height: 80px;
+          width: 180px;
+          object-fit: contain;
+        }
+        div.img-text{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          position: absolute;
+          top:0;
+          left: 0;
+          background-color: $darkCover;
+          font-size: 24px;
+          color: $white;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          user-select: none;
+          transition-duration: 0.2s;
+        }
+        &:hover div.img-text{
+          opacity: 1;
+        }
+
+
+        div.inner-text{
+          text-align: center;
+          padding-top: 5px;
+          font-family: $rigidFont;
+          font-size: 22px;
+        }
       }
     }
   }

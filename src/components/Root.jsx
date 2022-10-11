@@ -8,7 +8,8 @@ import Title from "./title/Title";
 
 
 function Root(props){
-
+// JSON Homepage 영역 : 
+// https://inputtitlehere.github.io/portfolio/
 
   return(
     <div className="root-wrapper">
