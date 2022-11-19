@@ -8,4 +8,4 @@
 ## Hosted At
 
 - Github Pages
-- Link : <a href='https://inputtitlehere.github.io/portfolio/' target="_blank">https://inputtitlehere.github.io/portfolio/</a>
+- Link : <a href='https://inputtitlehere.github.io/portfolio/' target="_blank" rel="noopener noreferrer">https://inputtitlehere.github.io/portfolio/</a>
