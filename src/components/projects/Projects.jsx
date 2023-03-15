@@ -87,11 +87,12 @@ function ProjectItem({
   github,
   children,
 }) {
+  const imageRoot = process.env.PUBLIC_URL;
   return (
     <div className="project-item">
       <h2 className="title"><span>{title}</span></h2>
       <div className="left">
-        <img src={`./img/proj_img/${image}.png`} alt="" />
+        <img src={`${imageRoot}/img/proj_img/${image}.png`} alt={image} />
         <ul>
           <li className="github">
             <a href={github} target={"_blank"} rel={"noreferrer"}>

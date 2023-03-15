@@ -1,22 +1,15 @@
-import human from "../../img/human.png";
-import calendar from "../../img/calendar.png";
-import address from "../../img/address.png";
-import phone from "../../img/phone.png";
-import email from "../../img/email.png";
-import github from "../../img/github.png";
-
 function AboutMe(props) {
   return (
     <section className="about-me">
       <div className="title">About Me</div>
       <div className="bio-wrapper">
-        <BioItem img={human} title="이름" info="백승윤" />
-        <BioItem img={calendar} title="생년" info="1997년" />
-        <BioItem img={address} title="주소" info="서울특별시 송파구" />
-        <BioItem img={phone} title="전화번호" info="010-6655-1793" />
-        <BioItem img={email} title="이메일" info="seanbryan97@naver.com" />
+        <BioItem img="human.png" title="이름" info="백승윤" />
+        <BioItem img="calendar.png" title="생년" info="1997년" />
+        <BioItem img="address.png" title="주소" info="서울특별시 송파구" />
+        <BioItem img="phone.png" title="전화번호" info="010-6655-1793" />
+        <BioItem img="email.png" title="이메일" info="seanbryan97@naver.com" />
         <BioItem
-          img={github}
+          img="github.png"
           title="깃허브"
           info="https://github.com/inputTitleHere"
         />
@@ -26,6 +19,7 @@ function AboutMe(props) {
 }
 
 function BioItem({ img, title, info }) {
+  const imageRoot = process.env.PUBLIC_URL+"/img/icons/";
   const infoSection = info.startsWith("https") ? (
     <div className="bio-info">
       <a href={info}>{info}</a>
@@ -39,7 +33,7 @@ function BioItem({ img, title, info }) {
       <tbody>
         <tr>
           <td rowSpan="2">
-            <img src={img} alt="" />
+            <img src={`${imageRoot}${img}`} alt="" />
           </td>
           <td className="td-title">
             <div className="bio-title">{title}</div>

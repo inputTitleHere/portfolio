@@ -27,12 +27,16 @@ function Skills(props) {
             spring: "Familiar",
             springBoot: "Used",
             mybatis: "Familiar",
+            "jpa-hibernate":"Used"
           }}
           rowsize={"2"}
         />
         <SkillContent
           classname="database"
-          images={{ oracle: "Familiar" }}
+          images={{
+            oracle: "Familiar" ,
+            postgres:"Used"
+        }}
           rowsize={"1"}
         />
         <SkillContentWithText
@@ -53,13 +57,14 @@ function Skills(props) {
 // image : map of img_name : "description"
 
 function SkillContent({ classname, images, rowsize }) {
+  const imageRoot = process.env.PUBLIC_URL;
   const [imgData, setImgData] = useState([]);
   if (imgData.length === 0) {
     const iArr = [];
     for (let key in images) {
       iArr.push(
         <div className="img-wrapper" key={key}>
-          <img src={`./img/${key}.png`} alt="" />
+          <img src={`${imageRoot}/img/${key}.png`} alt={key} />
           <div className="img-text">{images[key]}</div>
         </div>
       );
@@ -90,13 +95,14 @@ function SkillContent({ classname, images, rowsize }) {
  * @returns
  */
 function SkillContentWithText({ classname, images}) {
+  const imageRoot = process.env.PUBLIC_URL;
   const [imgData, setImgData] = useState([]);
   if (imgData.length === 0) {
     const iArr = [];
     for (let key in images) {
       iArr.push(
         <div className="img-wrapper" key={key}>
-          <img src={`./img/${key}.png`} alt="" />
+          <img src={`${imageRoot}/img/${key}.png`} alt={key} />
           <div className="img-text">{images[key][0]}</div>
           <div className="inner-text">{images[key][1]}</div>
         </div>
