@@ -26,8 +26,7 @@ function Skills(props) {
             servlet_jsp: "Used",
             spring: "Familiar",
             springBoot: "Used",
-            mybatis: "Familiar",
-            "jpa-hibernate":"Used"
+            mybatis: "Familiar"
           }}
           rowsize={"2"}
         />
