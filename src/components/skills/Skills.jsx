@@ -26,14 +26,14 @@ function Skills(props) {
             servlet_jsp: "Used",
             spring: "Familiar",
             springBoot: "Used",
-            mybatis: "Familiar"
+            mybatis: "Used"
           }}
           rowsize={"2"}
         />
         <SkillContent
           classname="database"
           images={{
-            oracle: "Familiar" ,
+            oracle: "Used" ,
             postgres:"Used"
         }}
           rowsize={"1"}
