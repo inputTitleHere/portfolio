@@ -15,7 +15,7 @@ function Skills(props) {
           images={{
             html_css_js: "Familiar",
             sass: "Used",
-            react: "Used",
+            react: "Familiar",
             jquery: "Used",
           }}
           rowsize={"2"}
@@ -24,9 +24,10 @@ function Skills(props) {
           classname="backend"
           images={{
             servlet_jsp: "Used",
-            spring: "Familiar",
-            springBoot: "Used",
-            mybatis: "Used"
+            spring: "Used",
+            springBoot: "Familiar",
+            mybatis: "Used",
+            "jpa-hibernate":"Used"
           }}
           rowsize={"2"}
         />
@@ -45,7 +46,7 @@ function Skills(props) {
         />
         <SkillContent
           classname="version-control"
-          images={{"git":"Used", "github_long":"Familiar"}}
+          images={{"git":"Familiar", "github_long":"Familiar"}}
           rowsize={"1"}
         />
       </div>

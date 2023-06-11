@@ -96,12 +96,18 @@ function Education(props) {
         <div className="edu-item">
           <h4>삼성 청년 SW 아카데미 (SSAFY) 9기</h4>
           <ul>
-            <li>1학기 진행중 <span>(2023.01 ~ )</span></li>
+            <li>1학기 수료 <span>(2023.01 ~ 2023.05)</span> (800시간)</li>
             <li>비전공 코스 입과 → 전공 코스로 전환</li>
             <li>
               알고리즘
               <ul>
                 <li>모의 SW 역량시험 A+ 달성 <span>(2023.03.10)</span> </li>
+              </ul>
+            </li>
+            <li>
+              1학기 성적우수상 수상 <span>(2023.05.26)</span>
+              <ul>
+                <li>1학기 코딩 집중과정 종합성적 반 2등</li>
               </ul>
             </li>
           </ul>
