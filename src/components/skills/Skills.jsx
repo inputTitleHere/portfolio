@@ -7,7 +7,7 @@ function Skills(props) {
       <div className="skill-content">
         <SkillContent
           classname="language"
-          images={{ java: "Familiar", python: "Used" }}
+          images={{ java: "Familiar", javascript : "Familiar" }}
           rowsize={"1"}
         />
         <SkillContent
@@ -16,17 +16,14 @@ function Skills(props) {
             html_css_js: "Familiar",
             sass: "Used",
             react: "Familiar",
-            jquery: "Used",
           }}
           rowsize={"2"}
         />
         <SkillContent
           classname="backend"
           images={{
-            servlet_jsp: "Used",
-            spring: "Used",
             springBoot: "Familiar",
-            mybatis: "Used",
+            spring: "Used",
             "jpa-hibernate":"Used"
           }}
           rowsize={"2"}
@@ -34,8 +31,9 @@ function Skills(props) {
         <SkillContent
           classname="database"
           images={{
-            oracle: "Used" ,
-            postgres:"Used"
+            // oracle: "Used" ,
+            postgres:"Used",
+            mysql:"Used"
         }}
           rowsize={"1"}
         />
