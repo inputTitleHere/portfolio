@@ -6,9 +6,9 @@ function Projects(props) {
         <ProjectItem
           title={"창작자의 노트북"}
           image={"creators-notebook"}
-          duration={"2023.04~2023.07"}
+          duration={"2023.04 ~ 2023.07"}
           devCount={"1"}
-          backend={"Java 17, Spring boot(3.0), JPA, Postgresql"}
+          backend={"Spring boot, JPA, Postgresql"}
           frontend={"React, React Router, React Redux"}
           github={"https://github.com/inputTitleHere/CreatorsNotebook"}
         >
@@ -35,7 +35,7 @@ function Projects(props) {
         <ProjectItem
           title={"포트폴리오"}
           image={"portfolio"}
-          duration={"2022.10~2022.10 (1주)"}
+          duration={"2022.10 ~ 2022.10 (1주)"}
           devCount="1"
           frontend={"React, Sass"}
           github="https://github.com/inputTitleHere/portfolio"
