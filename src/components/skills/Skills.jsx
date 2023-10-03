@@ -7,7 +7,7 @@ function Skills(props) {
       <div className="skill-content">
         <SkillContent
           classname="language"
-          images={{ java: "Familiar", javascript : "Familiar" }}
+          images={{ java: "Familiar", javascript: "Familiar" }}
           rowsize={"1"}
         />
         <SkillContent
@@ -24,7 +24,7 @@ function Skills(props) {
           images={{
             springBoot: "Familiar",
             spring: "Used",
-            "jpa-hibernate":"Used"
+            "jpa-hibernate": "Used",
           }}
           rowsize={"2"}
         />
@@ -32,19 +32,33 @@ function Skills(props) {
           classname="database"
           images={{
             // oracle: "Used" ,
-            postgres:"Used",
-            mysql:"Used"
-        }}
+            postgres: "Used",
+            mysql: "Used",
+          }}
           rowsize={"1"}
         />
         <SkillContentWithText
           classname="licences"
-          images={{"qnet":["2022년 9월 취득","정보처리기사"]}}
+          images={{ qnet: ["2022년 9월 취득", "정보처리기사"] }}
           rowsize={"1"}
         />
         <SkillContent
           classname="version-control"
-          images={{"git":"Familiar", "github_long":"Familiar"}}
+          images={{ git: "Familiar", github_long: "Familiar" }}
+          rowsize={"1"}
+        />
+        <SkillContent
+          classname="devops"
+          images={{
+            jenkins: "Used",
+          }}
+          rowsize={"1"}
+        />
+        <SkillContent
+          classname={"deployment"}
+          images={{
+            ec2: "Used",
+          }}
           rowsize={"1"}
         />
       </div>
@@ -75,11 +89,7 @@ function SkillContent({ classname, images, rowsize }) {
       style={{ gridRow: "span " + rowsize }}
     >
       <h3>
-        <span
-          dangerouslySetInnerHTML={{
-            __html: classname.toUpperCase().replace("-", "<br>"),
-          }}
-        ></span>
+        <span>{classname.toUpperCase().replace("-", "\n")}</span>
       </h3>
       {imgData}
     </div>
@@ -92,7 +102,7 @@ function SkillContent({ classname, images, rowsize }) {
  * @param {String[]} innerText - 이미지 순서에 맞게 추가텍스트 명시. 텍스트는 이미지 아래에 추가됨
  * @returns
  */
-function SkillContentWithText({ classname, images}) {
+function SkillContentWithText({ classname, images }) {
   const imageRoot = process.env.PUBLIC_URL;
   const [imgData, setImgData] = useState([]);
   if (imgData.length === 0) {
