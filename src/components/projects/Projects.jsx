@@ -9,17 +9,20 @@ function Projects(props) {
           duration={"2023.04 ~ 2023.07"}
           devCount={"1"}
           backend={"Spring boot, JPA, Postgresql"}
-          frontend={"React, React Router, React Redux"}
+          frontend={"React(Javascript), React Router, React Redux"}
           github={"https://github.com/inputTitleHere/CreatorsNotebook"}
         >
-          + 기획, 설계, 개발, 배포까지 수행한 개인 프로젝트입니다. <br />
-          + 웹툰, 웹소설, 만화 등 창작자분들의 설정관리를 돕기 위한 웹 서비스를
-          제공하고자 제작했습니다.
+          웹툰, 웹소설, 만화 등 창작자분들의 설정관리를 돕기 위한 웹 서비스를
+          제공하고자 제작했습니다. <br />
+          현재로서는 프로젝트 및 <strong>캐릭터 정보 관리 기능</strong>을
+          제공하고 있습니다.
           <br />
-          + Spring boot 기반의 백엔드, React 기반의 프론트엔드, AWS의 EC2 및
-          RDS(Postgresql)를 이용한 간단한 배포까지 수행하였습니다.
+          기획, 설계, 개발, 배포까지 수행한 <strong>개인 프로젝트</strong>
+          입니다.
           <br />
-          + 배포 주소는 다음과 같습니다. <br />
+          Spring boot(JPA) 기반의 백엔드, React(Javascript, Redux) 기반의
+          프론트엔드, AWS의 EC2 및 RDS(Postgresql)를 이용한 간단한 배포까지
+          수행하였습니다. <br />
           <a
             href="https://www.creators-notebook.com"
             target={"_blank"}
@@ -28,10 +31,40 @@ function Projects(props) {
             {"https://www.creators-notebook.com"}
           </a>
           <br />
-          <h4>[담당역할]</h4>
-          + 1인 개발로 기획, 설계, 개발, 배포 전과정 수행
+          <br />
+          <h4>[담당역할]</h4>+ 1인 개발로 기획, 설계, 개발[백엔드 : Spring boot,
+          프론트엔드 : React(Javascript)], 배포 전과정 수행
         </ProjectItem>
-
+        <ProjectItem
+          title={"Stargate"}
+          image={"stargate-architecture"}
+          duration={"2023.07 ~ 2023.08"}
+          devCount={"6"}
+          backend={"Spring boot, JPA, MySql, Jenkins, AWS EC2, Docker"}
+          github={"https://github.com/inputTitleHere/stargate"}
+        >
+          WebRTC 기술을 활용한 비대면 화상통화 기능을 기반으로 연예인 및 아이돌
+          그룹에 대한 비대면 팬 사인회를 제공하는 'Stargate'서비스를 제작하는
+          프로젝트입니다.
+          <br />
+          6인 1팀의 팀 프로젝트로 <strong>백엔드 개발 및 배포 담당</strong>을
+          맡았습니다.
+          <br />
+          삼성 청년 SW 아카데미의 교육과정 중 수행한 프로젝트로 10개 팀 중
+          3등으로 우수상을 수상하였습니다.
+          <br />
+          <br />
+          <h4>[담당역할]</h4>+ <strong>백엔드 개발</strong> [포스트잇 CRUD,
+          소속사 계정 CRUD 기능, 소속사 그룹과 멤버의 CRUD 기능, WebRTC 웹소켓]
+          <br />
+          + <strong>Jenkins와 Docker</strong>를 활용한 배포 자동화 시스템
+          구축(백엔드)
+          <br />
+          + 일부 프론트 개발 지원 [WebRTC 코드 보조]
+          <br />
+          + 기획, 설계 기여(팀원 모두 참여)
+          <br />
+        </ProjectItem>
         <ProjectItem
           title={"포트폴리오"}
           image={"portfolio"}
